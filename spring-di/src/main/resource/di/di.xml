@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:c="http://www.springframework.org/schema/c">
+
+	<!-- 构造器注入 constructor-arg -->
+
+	<bean id="sourceCfg" class="pro.jing.di.cfg.xml_based.SourceCfgImpl"></bean>
+
+	<!-- byIndex -->
+	<bean id="byIndex" class="pro.jing.di.cfg.xml_based.CfgImpl">
+		<constructor-arg index="0" ref="sourceCfg"></constructor-arg>
+		<constructor-arg index="1" value="read it..."></constructor-arg>
+	</bean>
+
+	<!-- byType -->
+	<bean id="byType" class="pro.jing.di.cfg.xml_based.CfgImpl">
+		<constructor-arg type="pro.jing.di.cfg.xml_based.SourceCfgApi"
+			ref="sourceCfg"></constructor-arg>
+		<constructor-arg type="java.lang.String" value="read it..."></constructor-arg>
+	</bean>
+
+	<!-- byName -->
+	<bean id="byName" class="pro.jing.di.cfg.xml_based.CfgImpl">
+		<constructor-arg name="where" ref="sourceCfg"></constructor-arg>
+		<constructor-arg name="what" value="read it..."></constructor-arg>
+	</bean>
+
+	<!-- 构造器注入 c标签 -->
+
+	<!-- byIndex -->
+	<bean id="cByIndex" class="pro.jing.di.cfg.xml_based.CfgImpl"
+		c:_0-ref="sourceCfg" c:_1="read it...">
+	</bean>
+
+	<!-- byName -->
+	<bean id="cByName" class="pro.jing.di.cfg.xml_based.CfgImpl"
+		c:where-ref="sourceCfg" c:what="read it..."></bean>
+
+	<!-- 属性注入 setter -->
+	<bean id="setterByName" class="pro.jing.di.cfg.xml_based.CfgImpl2">
+		<property name="where" ref="sourceCfg"></property>
+		<property name="what" value="read it..."></property>
+	</bean>
+
+	<!-- p标签 -->
+	<bean id="pByName" class="pro.jing.di.cfg.xml_based.CfgImpl2"
+		p:where-ref="sourceCfg" p:what="read it...">
+	</bean>
+
+	<!-- list setter -->
+	<bean id="listDi" class="pro.jing.di.cfg.xml_based.ListDi">
+		<property name="list">
+			<list>
+				<value>element 01</value>
+				<value>element 02</value>
+				<value>element 03</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- set setter -->
+	<bean id="setDi" class="pro.jing.di.cfg.xml_based.SetDi">
+		<property name="set">
+			<set>
+				<value>element 01</value>
+				<value>element 01</value>
+				<value>element 02</value>
+			</set>
+		</property>
+	</bean>
+
+	<!-- array -->
+	<bean id="arrayDi" class="pro.jing.di.cfg.xml_based.ArrayDi">
+		<property name="array">
+			<array>
+				<value>element01</value>
+				<value>element01</value>
+				<value>element01</value>
+			</array>
+		</property>
+	</bean>
+	
+	<!-- map -->
+	<bean id="mapDi" class="pro.jing.di.cfg.xml_based.MapDi">
+		<property name="map">
+			<map key-type="java.lang.String" value-type="java.lang.Integer">
+				<entry>
+					<key><value>key01</value></key>
+					<value>1</value>
+				</entry>
+				<entry>
+					<key><value>key02</value></key>
+					<value>2</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+		
+	
+
+
+
+</beans>
