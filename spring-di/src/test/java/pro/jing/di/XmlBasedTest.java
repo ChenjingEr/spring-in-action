@@ -13,7 +13,7 @@ import pro.jing.di.cfg.xml_based.ListDi;
 import pro.jing.di.cfg.xml_based.MapDi;
 import pro.jing.di.cfg.xml_based.SetDi;
 
-public class DiTest {
+public class XmlBasedTest {
 
 	/*
 	 * 构造器注入测试
@@ -93,7 +93,4 @@ public class DiTest {
 		Assert.assertNotNull(mapDi);
 		mapDi.printOut();
 	}
-	
-	
-	
 }
