@@ -23,7 +23,24 @@
 ```
 
 ###### Spring AOP
+Aspect: 切面，是横切关注点的模块化（做什么？ 什么时候？ 什么地方？ 通知+切入点）
+Pointcut:切入点， 什么地方
+Advisor:通知，做什么？+ 什么时候？
+
 1. schema based
-TODO
+在<aop:cofig>下配置AOP的各个元素
 2. @AspectJ based
-TODO
+需要声明AspectJ支持 <aop:aspectj-autoproxy />
+3. execution表达式  execution(方法表达式) -> 访问权限 方法签名 参数：
+```
+    * ： 匹配任意数量字符
+    ..: 匹配热河数量字符的重复。如在类型模式中匹配任何数量子包；方法参数模式中匹配任何数量参数
+    +： 匹配指定类型的子类型
+    AspectJ使用 且（&&）、或（||）、非（！）来组合切入点表达式。
+    Schema 中用 and、or、not
+
+    public * *(..) 任何公共方法
+    * pro.jing..Service.*() pro.jing包及其所有子包下Service接口中的任何无参方法
+    * pro.jing..Service.*(*)pro.jing包及其所有子包下Service接口中的任何只有一个参数方法
+    (!pro.jing..Service+).*(..) 非pro.jing包及其子包下的接口Service接口紫气子类型的任何方法
+```
