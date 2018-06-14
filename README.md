@@ -21,3 +21,9 @@
     @Configuration 声明是一个配置类
     @Bean 声明需要被容器管理的Bean
 ```
+
+###### Spring AOP
+1. schema based
+TODO
+2. @AspectJ based
+TODO

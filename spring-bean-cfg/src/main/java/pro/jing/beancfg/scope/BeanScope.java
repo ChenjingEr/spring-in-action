@@ -1,0 +1,12 @@
+package pro.jing.beancfg.scope;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+//@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+// @Scope("singleton") 默认
+@Scope("prototype")
+public class BeanScope {
+
+}

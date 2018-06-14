@@ -179,5 +179,6 @@
   <modules>
     <module>spring-di</module>
     <module>spring-aop</module>
+    <module>spring-bean-cfg</module>
   </modules>
 </project>
