@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="respority" class="pro.jing.bean.di.xml.ResporityImpl"></bean>
+
+	<!-- 默认单例模式 -->
+	<bean id="service01" class="pro.jing.bean.di.xml.ServiceImpl"
+		p:respority-ref="respority" p:name="service01" scope="singleton"></bean>
+	<!-- 原型模式 -->
+	<bean id="service02" class="pro.jing.bean.di.xml.ServiceImpl"
+		p:respority-ref="respority" p:name="service02" scope="prototype"></bean>
+</beans>

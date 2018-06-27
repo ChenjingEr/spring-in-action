@@ -177,8 +177,8 @@
 		</repository>
 	</repositories>
   <modules>
-    <module>spring-di</module>
     <module>spring-aop</module>
-    <module>spring-bean-cfg</module>
+    <module>spring-spel</module>
+    <module>spring-beans</module>
   </modules>
 </project>

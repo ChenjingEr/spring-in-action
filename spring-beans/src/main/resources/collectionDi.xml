@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<!-- List 注入 -->
+	<bean id="listDi" class="pro.jing.bean.di.xml.collection.ListDi">
+		<property name="list">
+			<list>
+				<value>element 01</value>
+				<value>element 02</value>
+				<value>element 03</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Map 注入 -->
+	<bean id="mapDi" class="pro.jing.bean.di.xml.collection.MapDi">
+		<property name="map">
+			<map key-type="java.lang.String" value-type="java.lang.Integer">
+				<entry>
+					<key>
+						<value>key01</value>
+					</key>
+					<value>1</value>
+				</entry>
+				<entry>
+					<key>
+						<value>key02</value>
+					</key>
+					<value>2</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<!-- Set 注入 -->
+	<bean id="setDi" class="pro.jing.bean.di.xml.collection.SetDi">
+		<property name="set">
+			<set>
+				<value>element 01</value>
+				<value>element 01</value>
+				<value>element 02</value>
+			</set>
+		</property>
+	</bean>
+	<!-- Array 注入 -->
+	<bean id="arrayDi" class="pro.jing.bean.di.xml.collection.ArrayDi">
+		<property name="array">
+			<array>
+				<value>element01</value>
+				<value>element01</value>
+				<value>element01</value>
+			</array>
+		</property>
+	</bean>
+
+	<!-- util 声明list -->
+	<util:list id="ulist">
+		<value>element 01</value>
+		<value>element 02</value>
+		<value>element 03</value>
+	</util:list>
+
+	<bean id="listDi02" class="pro.jing.bean.di.xml.collection.ListDi">
+		<property name="list" ref="ulist">
+		</property>
+	</bean>
+
+</beans>

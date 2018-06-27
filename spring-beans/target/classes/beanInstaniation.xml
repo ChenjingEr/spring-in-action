@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 静态工厂 -->
+	<bean id="r01"
+		class="pro.jing.bean.instantiation.ResporityStaticFactory"
+		factory-method="getObject">
+		<constructor-arg value="r01"></constructor-arg>
+	</bean>
+
+	<!-- 实例工厂 -->
+	<bean id="resporityInstanceFactory"
+		class="pro.jing.bean.instantiation.ResporityInstanceFactory"></bean>
+	<bean id="r02" factory-bean="resporityInstanceFactory"
+		factory-method="getObject">
+		<constructor-arg value="r02"></constructor-arg>
+	</bean>
+
+	<!-- FactoryBean -->
+	<bean id="r03" class="pro.jing.bean.instantiation.ResporityFactoryBean"></bean>
+</beans>
