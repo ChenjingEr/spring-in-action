@@ -152,6 +152,17 @@
 				<version>1.0</version>
 			</dependency>
 
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>8.0.11</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.mchange</groupId>
+				<artifactId>c3p0</artifactId>
+				<version>0.9.5.2</version>
+			</dependency>
 
 		</dependencies>
 	</dependencyManagement>
@@ -189,5 +200,6 @@
 		<module>spring-aop</module>
 		<module>spring-spel</module>
 		<module>spring-beans</module>
+		<module>spring-jdbc</module>
 	</modules>
 </project>
