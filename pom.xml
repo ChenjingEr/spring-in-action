@@ -135,6 +135,14 @@
 				<scope>test</scope>
 			</dependency>
 
+			<!-- spring 事物管理 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+
+
 			<dependency>
 				<groupId>org.aspectj</groupId>
 				<artifactId>aspectjrt</artifactId>
@@ -201,5 +209,6 @@
 		<module>spring-spel</module>
 		<module>spring-beans</module>
 		<module>spring-jdbc</module>
+		<module>spring-transaction</module>
 	</modules>
 </project>
