@@ -1,7 +1,5 @@
 package pro.jing.transaction;
 
-import javax.management.InstanceAlreadyExistsException;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +18,8 @@ public class ArithmeticServiceTest {
 	@Test
 	public void testArithmeticDiv() {
 		try {
+//			arithmeticService.add(10, 0);
+//			System.out.println(arithmeticService);
 			arithmeticService.div(10, 0);
 		} catch (ArithmeticExecpetion e) {
 			System.out.println(e.getMessage());

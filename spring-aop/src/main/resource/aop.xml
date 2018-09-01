@@ -16,7 +16,6 @@
 	<aop:config>
 		<aop:pointcut id="obstinateMind"
 			expression="execution(* pro.jing.aop.schema_based.IncorrigiblyObstinate.*())" />
-
 		<aop:aspect ref="aspect">
 			<aop:before pointcut-ref="obstinateMind" method="before"></aop:before>
 			<aop:after pointcut-ref="obstinateMind" method="after" />

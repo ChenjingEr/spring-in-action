@@ -18,16 +18,16 @@ public class BeanDiXmlBasedTest {
 		ctx = new ClassPathXmlApplicationContext("beanConfig.xml");
 	}
 
-	// @Test
-	public void simpleDiTest() {
+	 @Test
+	public void testSimpleDi() {
 
 		IRespority respority = (IRespority) ctx.getBean("respority");
 		Assert.notNull(respority);
 		respority.add();
 	}
 
-//	@Test
-	public void constructorInjectTest() {
+	@Test
+	public void testConstructorInject() {
 		// default
 		IService service01 = (IService) ctx.getBean("service01");
 		Assert.notNull(service01);
@@ -55,20 +55,19 @@ public class BeanDiXmlBasedTest {
 	}
 	
 	@Test
-	public void propertyDiTest() {
-		// property ≈‰÷√
+	public void testpPropertyDi() {
+		// property 
 		IService service06 = (IService) ctx.getBean("service06");
 		Assert.notNull(service06);
 		service06.add();
 		
 		//p tag
-		IService service07 = (IService) ctx.getBean("service07");
-		Assert.notNull(service07);
-		service07.add();
-		
-		//ƒ⁄≤ø¿‡
-		IService service08 = (IService) ctx.getBean("service08");
-		Assert.notNull(service08);
-		service08.add();
+//		IService service07 = (IService) ctx.getBean("service07");
+//		Assert.notNull(service07);
+//		service07.add();
+//		
+//		IService service08 = (IService) ctx.getBean("service08");
+//		Assert.notNull(service08);
+//		service08.add();
 	}
 }

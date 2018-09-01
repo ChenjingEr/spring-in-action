@@ -7,36 +7,36 @@
 
 	<!-- 申明被Bean管理的容器 id:唯一识别 class:实现类全路径名 -->
 	<bean id="respority" class="pro.jing.bean.di.xml.ResporityImpl"></bean>
-
-	<!-- 通过构造器配置Bean的属性 -->
+	
+	<!-- 通过构造器配置Bean的属性
 	<bean id="service01" class="pro.jing.bean.di.xml.ServiceImpl">
 		<constructor-arg ref="respority"></constructor-arg>
 		<constructor-arg value="service01"></constructor-arg>
-	</bean>
-	<!-- 构造器注入 byIndex -->
+	</bean>  -->
+	<!-- 构造器注入 byIndex
 	<bean id="service02" class="pro.jing.bean.di.xml.ServiceImpl">
 		<constructor-arg index="0" ref="respority"></constructor-arg>
 		<constructor-arg index="1" value="service02"></constructor-arg>
-	</bean>
+	</bean> -->
 
-	<!-- 构造器注入 byName -->
+	<!-- 构造器注入 byName 
 	<bean id="service03" class="pro.jing.bean.di.xml.ServiceImpl">
 		<constructor-arg name="respority" ref="respority"></constructor-arg>
 		<constructor-arg name="name" value="service03"></constructor-arg>
-	</bean>
+	</bean>-->
 
-	<!-- 构造器注入 byType type:实现类的路径名 -->
+	<!-- 构造器注入 byType type:实现类的路径名
 	<bean id="service04" class="pro.jing.bean.di.xml.ServiceImpl">
 		<constructor-arg
 			type="pro.jing.bean.di.xml.ResporityImpl" ref="respority"></constructor-arg>
 		<constructor-arg type="java.lang.String"
 			value="service04"></constructor-arg>
-	</bean>
+	</bean> -->
 
-	<!-- 构造器注入c标签 -->
+	<!-- 构造器注入c标签 
 	<bean id="service05" class="pro.jing.bean.di.xml.ServiceImpl"
 		c:respority-ref="respority" c:name="service05">
-	</bean>
+	</bean>-->
 
 	<!-- property注入，指定名字，setter方法 -->
 	<bean id="service06" class="pro.jing.bean.di.xml.ServiceImpl">
@@ -44,18 +44,18 @@
 		<property name="name" value="service06"></property>
 	</bean>
 
-	<!-- p tag -->
+	<!-- p tag 
 	<bean id="service07" class="pro.jing.bean.di.xml.ServiceImpl" p:respority-ref="respority" p:name="service07">
-	</bean>
+	</bean>-->
 	
-	<!-- 内部类配置 -->
+	<!-- 内部类配置 
 	<bean id="service08" class="pro.jing.bean.di.xml.ServiceImpl">
 		<property name="respority">
 			<bean class="pro.jing.bean.di.xml.ResporityImpl">
 			</bean>
 		</property>
 		<property name="name" value="service08"></property>
-	</bean>
+	</bean>-->
 
 
 

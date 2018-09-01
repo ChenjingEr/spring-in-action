@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Success</title>
+<title>Insert title here</title>
 </head>
 <body>
-Spring MVC 
 
-msg : ${requestScope.msg}
+<a href="/exceptionSolve?i=10"> exception</a>
 
 </body>
 </html>

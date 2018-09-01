@@ -15,7 +15,7 @@ public class BeanCycleTest {
 	}
 	
 	@Test
-	public void insetaniationTest() {
+	public void testInsetaniation() {
 		IRespority respority = (IRespority) ctx.getBean("respority01");
 		respority.add();
 		ctx.close();

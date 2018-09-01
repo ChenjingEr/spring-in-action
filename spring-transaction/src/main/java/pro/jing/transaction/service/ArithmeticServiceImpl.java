@@ -21,7 +21,7 @@ public class ArithmeticServiceImpl implements IArithmeticService {
 
 	@Override
 	public void add(int i, int j) {
-
+		System.out.println(i + j);
 	}
 
 	@Override

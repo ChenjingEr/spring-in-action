@@ -222,5 +222,6 @@
 		<module>spring-web</module>
     <module>spring-resource</module>
     <module>spring-mvc</module>
+    <module>spring-event</module>
   </modules>
 </project>
